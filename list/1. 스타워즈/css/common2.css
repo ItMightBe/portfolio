@@ -1,0 +1,549 @@
+@charset "utf-8";
+/* reset */
+html {
+	font-size: 16px;
+}
+body {
+	font-family:'DIN', 'Apple SD Gothic Neo','Nanum Gothic','굴림',gulim,Arial, sans-serif;
+	font-weight:normal;
+	font-size:12px;
+	line-height:1.3;
+	color:#666666;
+	
+	margin:0;
+	padding:0;
+}
+img {border:none;}
+
+br	{
+	letter-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size:1em;
+}
+h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption {
+	margin:0;
+	padding:0;
+}
+ul, ol {
+	list-style:none;
+}
+
+a {text-decoration:none; color:;}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face { 
+	font-family: "DIN"; 
+	font-style: normal; 
+	font-weight: 600; 
+	src: 
+	url("https://static-mh.content.disney.io/starwars/assets/din_reg/da088ecca53c4831a95b6fd81b2-906f216c018f.eot?#iefix") format("embedded-opentype"), 
+	url("https://static-mh.content.disney.io/starwars/assets/din_reg/da088ecca53c4831a95b6fd81b2-e031b4de535a.woff") format("woff"), 
+	url("https://static-mh.content.disney.io/starwars/assets/din_reg/da088ecca53c4831a95b6fd81b2-3a0460b3f41b.ttf") format("truetype"), 
+	url("https://static-mh.content.disney.io/starwars/assets/din_reg/da088ecca53c4831a95b6fd81b2-61b997f2678f.svg#e3145f65-29b5-4f7f-8c6e-2dc135021b6a") format("svg"); 
+}
+@font-face { 
+	font-family: "DINCond"; 
+	font-style: normal; 
+	font-weight: 600; 
+	src: 
+	url("https://static-mh.content.disney.io/starwars/assets/dincond_med/4f311da19ec64379fa962bc1b45-c6e2e32ef272.eot?#iefix") format("embedded-opentype"), 
+	url("https://static-mh.content.disney.io/starwars/assets/dincond_med/4f311da19ec64379fa962bc1b45-8a7c81b3069f.woff") format("woff"), 
+	url("https://static-mh.content.disney.io/starwars/assets/dincond_med/4f311da19ec64379fa962bc1b45-e44e78570600.ttf") format("truetype"), 
+	url("https://static-mh.content.disney.io/starwars/assets/dincond_med/4f311da19ec64379fa962bc1b45-b2b2d5921af2.svg#4f311da1-9ec6-4379-9621-b45be0e23abd") format("svg"); 
+}
+@font-face { 
+	font-family: "DIN"; 
+	font-style: normal; 
+	font-weight: 800; 
+	src: 
+	url("https://static-mh.content.disney.io/starwars/assets/din_med/b90b6bdf15e245449fe092c79ff-6cf0f3c6f832.eot?#iefix") format("embedded-opentype"), 
+	url("https://static-mh.content.disney.io/starwars/assets/din_med/b90b6bdf15e245449fe092c79ff-75090969b221.woff") format("woff"), 
+	url("https://static-mh.content.disney.io/starwars/assets/din_med/b90b6bdf15e245449fe092c79ff-cc3283a08cc2.ttf") format("truetype"), 
+	url("https://static-mh.content.disney.io/starwars/assets/din_med/b90b6bdf15e245449fe092c79ff-abc53257b584.svg#b90b6bdf-15e2-4544-9fe0-92c79fff0ecd") format("svg"); 
+}
+
+/*데스크탑 : 1025~*/
+
+
+/*공통*/
+.clearfix:after {content:''; zoom:1; clear: both; display: block;}
+.hide {
+	display: block;
+	font-size: 0; 
+	height: 0; 
+	text-indent: -9999px;
+	margin: 0;
+	border: none;
+}
+
+
+/*레이아웃*/
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.wrap {
+	position: relative; 
+	width: 100%;
+	height: 100%;
+	background: black;
+}
+
+
+/*헤더*/
+header {
+	position: fixed; 
+	top:0; left:0; 
+	right: 0; 
+	height: 300px;
+	background-color: orange;
+	background: 
+	url(../images/solo-trailer-stills-header-han-solo-falcon-1x_00e868d9.jpeg) no-repeat center center;
+	background-size: auto 300px;
+}	
+header > .header {
+	height: 100%;
+	max-width: 1350px;
+	width: 100%;
+	margin:0 auto;
+	position: absolute;
+	left:0;
+	right:0;
+	padding-left:24px;
+	padding-right:24px;
+	padding-top: 1.4%;
+}
+.header > h1 {
+	width: 293px; 
+	height: 127px; 
+	/*border:1px solid blue;*/
+	margin: 68px auto 0;
+}
+.header > h1 a {vertical-align: top;display: inline-block;}
+.header > h1 a img {vertical-align: top;}
+.header > .link {
+	position: absolute;
+	top:22px;
+	left:24px;
+	/*border:1px solid lime;*/
+}
+.header > .link > .social {float:left;}
+.header > .link > .social li {float:left; margin: 0 7px;}
+.header > .link > .social li:first-child {
+	margin-left: 0px;
+}
+.header > .link > .social a {
+	display: block;
+	width: 28px;
+	height: 28px;
+	background-image: url(../images/social_sprite-dd24527bbe38.png);
+	background-size: 700% 300%;
+	text-indent: -9999px;
+}
+.header > .link > .social .num1 a {}
+.header > .link > .social .num2 a {
+	background-position: 16% 0;
+}
+.header > .link > .social .num3 a {background-position: 33.33333% 0%;}
+.header > .link > .social .num4 a {background-position: 50% 0;}
+.header > .link > .social .num5 a {background-position: 66.66667% 0%;}
+.header > .link > .social .num6 a {background-position: 83.33333% 0%;}
+.header > .link > .show_disney {
+	border-left: 1px solid white;
+	float: left; 
+	color:white;
+	line-height: 26px;
+	margin-left: 10px;
+	padding-left: 12px;
+}
+.header > .link > .show_disney > span {
+	vertical-align: top;
+}
+.header > .right {
+	position: absolute;
+	top:22px;
+	right: 22px;
+}
+.header > .right > .search {
+	position: relative;
+}
+.header > .right > .search > input {
+	line-height: 37px;
+	width: 238px;
+	background-color: rgba(225, 225, 225, 0.7);
+	font-size: 14px;
+	padding-left: 15px;
+	border-radius: 5px;
+	box-shadow: none;
+	font-family: DIN;
+	color: gray;
+}
+.header > .right > .search .search_icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 50px;
+	height: 50px;
+	background:url(../images/search_icon-2c79f0615f1d.png) no-repeat
+	0 0;
+}
+.header > .right > .login {
+	overflow: hidden;
+	text-align: right;
+	margin-top: 20px;
+	width: 125px;
+	padding-left: 113px;
+}
+.header > .right > .login a {
+	color:white;
+	font-weight: bold;
+}
+.header > .right > .login * {
+	float:left; 
+	font-size: 14px;
+}
+.header > .right > .login p {padding:0 8px;}
+header > nav {
+	position: absolute;
+	top:300px;
+	left:0;
+	width: 100%;
+	height: 68px;
+	background-color: #222;
+	text-align: center;
+	z-index: 10;
+}
+nav > ul {
+	width: 100%;
+	background-color: #222;
+	height: 100%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+nav > ul:after {content: ''; zoom:1; display: block; clear: both;}
+nav > ul li {
+	float: left;
+	width: 12.5%;
+	border-right: 1px solid #333;
+	height: 100%;
+	box-sizing: border-box;
+}
+nav > ul li:hover {background-color: #111;}
+nav > ul li:first-child {border-left: 1px solid #333; /*! width: 148px; */}
+nav > ul li.num1 a span{}
+nav > ul li.num2 a span {background-position: 11.11111% 0%;}
+nav > ul li.num3 a span {background-position: 22.22222% 0%;}
+nav > ul li.num4 a span {background-position: 33.33333% 0%;}
+nav > ul li.num5 a span {background-position: 44.44444% 0%;}
+nav > ul li.num6 a span {background-position: 55.55555% 0%;}
+nav > ul li.num7 a span {background-position: 66.66666% 0%;}
+nav > ul li.num8 a span {background-position: 77.77777% 0%;}
+nav > ul li a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	color:#aba7a8;
+	font-size: 14px;
+	line-height: 1;
+}	
+nav > ul li a > span {
+	display: block;
+	width: 46px;
+	height: 46px;
+	background-image: url(../images/section_icon_sprite-383dbefd9b1f.png);	
+	margin: 0 auto;
+}
+
+
+/*메인-공통*/
+main {
+	position: relative;
+	margin-top: 368px;
+	width: 100%;
+	display: block;
+	background-color: black;
+}
+main > .main_wrapper {
+	position: absolute;
+	width: 100%;
+	left:0;
+	right:0;
+	top:0;
+	background-color: black;
+}
+.main_wrapper .main_width {
+	position: relative;
+	margin:0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+.main_width .main_padding {	padding: 0 0.8333333333333333%;}
+.main_wrapper .section {margin-top: 34px;}
+.h2_space {padding: 0 12px;}
+h2 {
+	font-size: 1.15rem;
+	border-top: 2px solid #3c3c3c;
+	border-bottom: 2px solid #3c3c3c;
+	line-height: 38px;
+	margin-bottom: 16px;
+	color: #ddd;
+	padding: 0 12px;
+	letter-spacing: 1.28333px;
+	vertical-align: top;
+}
+.section_latest .row {width: 100%;}
+.half {	float:left; width: 50%; /*! background-color: red; */}
+.title {color:#ddd;letter-spacing: 0.07px;font-weight: 800;}
+.half .title:hover {color:#3273c5;}
+.box_top {
+	width: 100%;
+	/*! position: relative; */
+	/*! background-color: blue; */
+}
+.box_height {position: relative;}
+.box_padding{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.half .box_top .box_padding {
+	padding: 2.372881355932203%;
+	/*! background-color: gray; */
+}
+.box_top .inside {
+	width: 100%;
+	height: 100%;
+	background-color: #272727;
+	position: relative;
+	border-radius: 6px;
+	overflow: hidden;
+}
+.horizontal .image_wrapper, .horizontal .text_wrapper {height: 100%;}
+.horizontal .image_wrapper {float:left;position: relative;}
+.horizontal .text_wrapper {float:right;position: relative;box-sizing: border-box;}
+.image_wrapper .image_height {position: relative; height: 100%;}
+.half .image_wrapper a {}
+.image_wrapper a img {position: absolute;top: 0;left: 0;width: 100%;}
+.text_wrapper {background: url(../images/bg_hash_top-dca2c5ab1b2e.png) repeat-x;}
+.horizontal .image_wrapper:after {
+	content: '';
+	display: block;
+	position:absolute;
+	bottom: 0;
+	top:0;
+	right: 0;
+}
+.horizontal.news .image_wrapper:after {border-left: 2px solid #3473c3;}
+.horizontal.films .image_wrapper:after {border-left: 2px solid #e5ed3f;}
+.horizontal.video .image_wrapper:after {border-left: 2px solid #e25021;}
+.half .text_wrapper .text_space {
+	height: 82%;
+	width: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	padding-top: 2%;
+}
+.text_space {		background-color: transparent;}
+.text_wrapper p.desc {color:#a3a3a3; width: 95%;font-weight: 600;}
+.text_wrapper .metadata {
+	font-weight: 600;
+	font-family: DINCond; 
+	letter-spacing: 1.28333px;
+	left: 0;
+	position: absolute;
+	padding-left: 2.135231%;
+	bottom: 2px;
+	color:#ddd;
+}
+.text_wrapper .metadata .films {color:#e5ed3f;}
+.text_wrapper .metadata .date {color:#a9a9a9;}
+.text_wrapper .metadata .news {color:#3066a4; font-size: 11.5px;}
+.text_wrapper .metadata .video {color:#d8521d;}
+.text_wrapper .metadata .icon {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-image: url(../images/section_icon_sprite-383dbefd9b1f.png);
+	background-size: 1000% 200%;
+	width: 15px;
+	height: 15px;
+	vertical-align: top;
+}	
+.metadata.films > .icon {background-position: 30% 0;}
+.box_top .text_wrapper .triangle_crop {
+	display: block;
+	transform: rotate(45deg) translateX(71%);
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.box_top .text_wrapper .triangle_crop img {
+	transform: rotate(-45deg) translateX(-50%) translateY(-21%);
+}
+.decal {width: 48px; overflow: hidden;position: absolute;right: 10px;opacity: 0.1;z-index: 6;height: 23.75px;bottom: 0;/*! margin-bottom: 1%; */}
+.decal img {transform: translate(-33.33333%,0);}
+
+/*박스 테두리 모양 만들기*/
+.vertical .text_wrapper:before {
+	content:''; 
+	display: block; 
+	border-top:6px solid #272727;
+	position: absolute;
+	left: 0;
+	width: 60%;
+	z-index: 5;
+	bottom: 0;
+	border-right: 6px solid transparent;
+}
+.horizontal .text_wrapper:before {
+
+}
+.vertical .text_wrapper:after {
+	content:''; 
+	display: block; 
+	border-top:6px solid #272727;
+	position: absolute;
+	right: 0;
+	width: 21%;
+	z-index: 5;
+	bottom: 0;
+	border-left: 6px solid transparent;
+}
+
+/*메인 - ratio_50x100*/
+.half .ratio_50x100 .title {font-size: 18px; font-weight: 800;}
+.half .ratio_50x100 .box_height {
+	padding-top: 75%;
+	position: relative;
+	background-color: black;
+}
+.half .ratio_50x100 .image_wrapper {position: relative;	width: 100%; display: block;}
+.half .ratio_50x100 .image_wrapper .image_height {
+	padding-top:56.25%;
+	width: 100%;
+	display: block;
+}
+.ratio_50x100 .image_wrapper .image_height:after {
+	content: '';
+	display: block;
+	border-top: 2px solid #3473c3;
+	position:absolute;
+	left:0;
+	right:0;
+	bottom: 0;
+}
+
+.half .ratio_50x100 .inside .text_wrapper {
+	position: relative;
+	padding: 2% 2.5%;
+	height: 23.8%;
+	box-sizing: border-box;
+}
+.half .ratio_50x100 .text_wrapper .text_space {width: 90%}
+.metadata .author {display: block; color:#a9a9a9;}
+.ratio_50x100 .text_wrapper .triangle_crop{
+	width: 102px;
+	height: 102px;
+}
+.ratio_50x100 .text_wrapper .triangle_crop img {
+	width: 72px;
+	height: 72px;
+}
+.text_wrapper .background {background-color: #272727; height: calc(100% - 6px);position: absolute;left: 0;top: 0;right: 0;}
+.inside.border {background-color: transparent;}
+
+/*메인 - ratio_50x33*/
+.half .box_top.ratio_50x33 .box_height {position: relative; padding-top: 25%;}
+.box_top.ratio_50x33 .image_wrapper {
+	float:left;
+	width: 38%;
+	position: relative;
+	height: 100%;
+}
+.box_top.ratio_50x33 .text_wrapper {
+	float:right;
+	width: 62%;
+	padding: 2.135231%;
+	box-sizing: border-box;
+	position: relative;
+	height: 100%;
+}
+.ratio_50x33 .title {font-size:16.5px; font-weight: 800;}
+.ratio_50x33 .text_wrapper .triangle_crop {
+	width: 79px;
+	height: 79px;
+}
+.ratio_50x33 .text_wrapper .triangle_crop img {
+	width: 56px;
+	height: 56px;
+}
+/*메인-ratio_100x100*/
+.ratio_100x100 .title {font-size: 22px;}
+.ratio_100x100 .box_height { padding-top:25%; position: relative;}
+.ratio_100x100 .box_padding {
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	padding:1.186441%; /*14/1180*/
+	bottom: 0;
+}
+.ratio_100x100 .image_wrapper {
+	width: 46.267361%;/*533/1152*/
+}
+.ratio_100x100 .text_wrapper {
+	width: 53.732639%;
+	box-sizing: border-box;
+	padding:1.736111%; /*20/1152*/
+}
+.ratio_100x100 .text_wrapper .metadata {
+	padding-left: 3.403566%; /*21/617*/
+}
+.text_wrapper .metadata.video .icon {
+	background-position: 10% 0;
+}
+.ratio_50x100.video .image_wrapper .image_height::after {
+	border:2px solid #d8521d;
+}
+/*광고 ad*/
+.ad { display:block; }
+.ad > .inside {padding: 1.186441%}
+.ad > .inside img {width: 100%;}
+
+/*메인-ratio_100x200*/
+.ratio_100x200 .box_height {
+	padding-top:35%; /*413/1180*/
+}
+.ratio_100x200 .box_padding {padding:1.186441%}
+.ratio_100x200 .image_wrapper {width:64.0625%} /*738/1152*/
+.ratio_100x200 .text_wrapper {
+	width:35.9375%;/*414/1152*/
+	padding:2.170139%; /*25/1152*/
+	height: 100%;
+} 
+.ratio_100x200 .title {font-size: 32px;}
+
+/*메인-ratio_33x50*/
+.theaters.row3 {padding:0 0.508475%;/*6/1180*/}
+.big_wrapper {height: auto;width:100%; padding:0.513699%;/*6/1168*/box-sizing: border-box;border-bottom: 1px solid #434446;overflow: hidden;}
+.big_wrapper_height {height: auto;/*position: relative; padding-top: 53.979239%;*//*624/1156*/}
+.basement {width: 33.333333%; float:left;}
+.container {width: 100%; position: relative;}
+.ratio_33x50 {width: 100%; position: absolute; top:0; left:0;}
+.ratio_33x50 .box_height {padding-top: 68.497913%;} /*266/385.333*/
+
+
+/*꿀소스 이미지 서버 주소(정주한테 받은 거)*/
+/*<img src="https://lumiere-a.akamaihd.net/v1/images/swcom_tlj_header_finalfinal_588abb64.gif" alt=""/ >*/
+
+

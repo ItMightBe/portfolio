@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+
+/* reset */
+body {
+	margin:0;
+	padding:0;
+}
+h1, h2, h3, h4, h5, h6 {font-size:1em;}
+h1, h2, h3, h4, h5, h6, div, p, dl, dt, dd, ul, ol, li, form, fieldset, blockquote, address, table, thead, tbody, tfoot, tr, td, caption,input {
+	margin:0;
+	padding:0;
+}
+ul, ol {list-style:none;}
+
+img {border:0;}
+
+a {text-decoration:none; color:#222;}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button{border:0 none;background-color:transparent;cursor:pointer}
+/* fonts */
+@font-face {
+	font-family: 'Kakao Light';
+	src: url(../fonts/KakaoOTF-aLt.eot);
+    src: url(../fonts/KakaoOTF-aLt.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+	font-family: 'Kakao Regular';
+	src: url(../fonts/KakaoOTF-bRg.eot);
+    src: url(../fonts/KakaoOTF-bRg.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+	font-family: 'Kakao Bold';
+	src: url(../fonts/KakaoOTF-cBd.eot);
+    src: url(../fonts/KakaoOTF-cBd.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* common */
+.hidden {
+    visibility:hidden;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    width:1px;
+    height:1px;
+	text-indent:-9999px;
+}
+.ico_recruit {font-size:0; background:url(../images/ico_recruit_180731.png) no-repeat; text-indent:-9999px;}
+#kakaoLogo {display:block; width:109px; height:23px; background-position:0 0; text-indent:-9999px;}
+
+/* layout */
+html, body {height:100%;}
+#wrap {position:relative; width:100%; height:100%; min-width:980px;}
+#header {position:fixed; top:0; left:0; right:0; z-index:10; min-width:980px;}
+
+/* header */
+#header {background-color:transparent;}
+#header .area_login {position: absolute; top:20px; right:23px; font-size:0; color:#fff;}
+#header .area_login .txt_login {float:left; margin: 3px 0 0 7px;font-size: 13px;}
+#header .area_login .btn_arrow {float:left; margin:9px 0 0 15px;}
+.btn_arrow { 
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 4px solid #fff;
+}
+#header h1 {position:absolute; top:19px; left:20px; z-index:20;}
+#header .gnb {position: relative; width:100%; font-size:0; text-align:center; }
+#header .gnb > .list_gnb li {display:inline-block; margin-left:45px;}
+#header .gnb > .list_gnb > li:first-child {margin-left:0;}
+#header .gnb .txt_gnb {	
+	display: inline-block;
+	position: relative;
+	height: 59px;
+	font-size:15px; 
+	font-family: 'Kakao Regular'; 
+	color:#fff; 
+	line-height: 66px; 
+}
+#header .gnb > .list_gnb > li > .txt_gnb { position: relative;}
+#header .gnb .list_sub_gnb {
+	overflow:hidden; 
+	position:absolute; 
+	top:60px; 
+	left:0; 
+	right:0; 
+	height:0; 
+	transition:all 0.3s ease;
+}
+#header.white .gnb li:hover > .txt_gnb:after {
+	content:''; 
+	display:block; 
+	position:absolute; 
+	left:0;
+	right:0;
+	bottom:12px;
+	width:100%; 
+	height:1px; 
+	border-bottom:1px solid #000;	
+}
+#header.white .gnb li:hover .txt_gnb {color:#000;}
+#header.white {background-color:#fff;  border-bottom:1px solid #e8e8e8; }
+#header.white h1 a {color:#1e1e1e; background-position:-120px 0;}
+#header.white .gnb .txt_gnb {color:#333;}
+#header.white .area_login {color:#000;}
+#header.white .area_login .btn_arrow {border-top:4px solid #000; opacity:0.5;}
+#header.white .list_sub_gnb {background-color:#fff;}
+
+/* main_visual */
+.main_visual {position:relative;}
+.slider {overflow:hidden; width:100%; height:720px;}
+.slider .slide {width:100%; height:100%; position: relative; background-size:cover; background-repeat: no-repeat; background-position:50% 60%;}
+.slider .slide.num1 {background-image: url(../images/krew_doyle.jpg);}
+.slider .slide.num2 {background-image: url(../images/krew_esther.jpg);}
+.slider .slide.num3 {background-image: url(../images/krew_matt.jpg);}
+.slider .slide.num4 {background-image: url(../images/krew_kenny.jpg);}
+.slider .slide.num5 {background-image: url(../images/krew_harry.jpg);}
+.slider .area_info {padding:275px 0 0 173px;}
+.slider .area_info .link_interview {color:#fff;}
+.slider .area_info .link_interview > * {display:block;}
+.slider .area_info .name_info {padding-left:3px; font-weight:normal; font-size:15px; font-family:'Kakao Regular'; color:#fff;}
+.slider .area_info .desc_info {
+	padding:12px 0 35px; 
+	font-size:42px; 
+	line-height:60px; 
+	font-family:'Kakao Light','맑은 고딕','Malgun Gothic','Apple SD Gothic Neo','돋움',dotum,sans-serif;
+	color: #fff;
+}
+.slider .area_info .txt_interview {	padding-left:2px; font-size:12px; font-family:'Kakao Regular'; color:#ffdc00;}
+.slider .area_info .txt_interview .btn_arrow { 
+	display:inline-block;
+	width:7px;
+	height:9px;
+	margin:2px 0 0 9px;
+	border:none;
+	background-position:-60px -80px;
+	vertical-align:top;
+}
+.main_visual .btn_prev, 
+.main_visual .btn_next {
+	z-index:10;
+	position: absolute;
+	top:50%;
+	margin-top:-23px;
+	width:46px;
+	height:46px;
+
+}
+.main_visual .btn_prev {left:20px; background-position:-210px -190px;}
+.main_visual .btn_next {right:20px; background-position:-210px -240px;}
+.main_visual .slide_count {
+	position:absolute; 
+	bottom: 39px; 
+	left:0; 
+	right:0; 
+	color:#fff; 
+	font-size: 18px;
+	font-family: 'Kakao Light','맑은 고딕','Malgun Gothic','Apple SD Gothic Neo','돋움',dotum,sans-serif;
+	text-align: center;
+}
+
+/* main_content */
+.main_content {width:100%;}
+.list_content {overflow:hidden; width:100%;}
+.list_content li {float:left; width:33.333%;}
+.list_content .link_col {overflow:hidden; display:block; position: relative; width:100%; height:400px;}
+.list_content .link_col.num1 {background-color:#caf3dc;}
+.list_content .tit_col {
+	position:absolute;
+	left:19px;
+	top:18px;
+	z-index:10;
+	font-size:15px;
+	font-family: 'Kakao Light','맑은 고딕','Malgun Gothic','Apple SD Gothic Neo','돋움',dotum,sans-serif;
+	color:#000;
+}
+.list_content img {
+	position:absolute; 
+	height:100%; 
+	top:50%; 
+	left:50%; 
+	transform:translate(-50%, -50%);
+}
+.list_content .desc_work {
+	display:block;
+	width:100%;
+	height:100%;
+	background-color: #d4d1cc;
+	text-align:center;
+}
+.list_content .desc_work .txt_work {
+	display:block;
+	position:absolute;
+	top:50%;
+	width:100%; 
+	color: #1e1e1e;
+	font-size:30px;
+	line-height:47px;
+	font-family: 'Kakao Regular';
+	transform:translateY(-50%);
+}
+
+/* footer */
+#footer {border-top:1px solid #cecece; height:90px; z-index:10; font-size:0; }
+#footer > .inner {
+	padding:15px 21px;
+	font-family:'돋움',dotum,sans-serif;
+	line-height:20px;
+	color:#333;
+}
+#footer > .inner:after {content:''; display:block; clear:both; zoom:1;}
+#footer span {font-size:11px;}
+#footer a {display:inline-block;}
+#footer .btn_arrow {
+	display:inline-block; 
+	margin-left:7px; 
+	border-width:3px;
+	border-top:3px solid #666;
+	vertical-align: 1px;
+}
+#footer .footer_info {float:left; font-size:11px;}
+.footer_info .txt_bar {padding: 0 3px;}    
+.footer_info .txt_copyright {padding-top: 1px; font-family: Tahoma;}
+.footer_content {float:right;}
+.footer_content > * {float:left; position:relative;}
+.footer_content .family_sites {margin-right:20px;}
+.footer_content .family_sites .list_site {top:-90px; width:74px; font-size:11px;}
+.footer_content .family_sites .list_site a {font-size:11px;}
+.footer_content .lang_select > * {float:left;}
+.footer_content .lang_select .list_lang {top:-70px; font-size:11px;}
+.footer_content .list_link {
+	display: none;
+	position: absolute;
+	right:0;
+	padding: 11px 19px 9px;
+	letter-spacing: -1px;
+	border: 1px solid #bbb;
+	background-color: #fff;
+}
+.footer_content .list_link.opened {display:block;}
+.footer_content .list_link li a {position: relative;}
+.footer_content .list_link li:hover a:after {
+	content:''; 
+	display:block; 
+	position:absolute; 
+	left:0;
+	right:0;
+	bottom:4px;
+	width:100%; 
+	height:1px; 
+	border-bottom:1px solid #000;	
+}
+
+
+/* meida query */
+@media all and (max-width:1300px){
+    .slider{height:620px;}
+    .slider .area_info {padding:208px 170px 0;}
+}
+@media all and (max-width:1200px){
+    .list_content .link_col {height:319px;}
+    .list_content img {width:320px; height:319px;}
+}
+@media all and (max-width:1050px){
+    .list_content .link_col {height:299px;}
+    .list_content img {width:300px; height:299px;}
+    .list_content .desc_work .txt_work {font-size:22px; line-height:35px;}
+}
+@media all and (max-width:980px){
+    .slider .area_info {padding:208px 98px 0;}
+}
+@media all and (max-width:900px){
+    .list_content .link_col{height:249px;}
+    .list_content img_inside {width:250px; height:249px;}
+}

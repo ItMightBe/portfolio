@@ -1,0 +1,46 @@
+<html lang="ko">
+<head>
+    <title>CSS로 화살표 아이콘 만들기</title>
+    <meta charset="UTF-8"/>
+    <meta name="Description" content="카카오 채용 페이지에서 만든 화살표 아이콘 참고" />
+    <style>
+    .title {display:block; position: relative; width:100%; margin: 50px 0; font-size:30px; text-align: center;}
+    .empty{
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%, -50%);
+        border-top:100px solid red;
+        border-right:100px solid orange;
+        border-bottom:100px solid blue;
+        border-left:100px solid green;
+    }
+    .empty .description{
+        /* position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0; */
+        font-size:20px;
+        font-weight: bold;
+    }
+    .description > * {position:absolute;}
+    .description .top {color:red; top:-250px; left:-30px;}
+    .description .right {color:orange; top:-10px; right: -400px;}
+    .description .bottom {color:blue; bottom:-250px; left:-30px;}
+    .description .left {color:green; top:-10px; left: -400px;}
+    </style> 
+</head>
+<body>
+    <strong class="title">width와 height가 없는 상태에서의 border가 차지하는 영역</strong class="title">
+    <div class="empty">
+        <div class="description">
+            <span class="top">red: border-top 100px</span>
+            <span class="right">orange: border-right 100px</span>
+            <span class="bottom">blue: border-bottom 100px</span>
+            <span class="left">green: border-left 100px</span>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>starwars_script_practice</title>
+	<meta name="robots" content="all" />
+	<link rel="stylesheet" type="text/css" media="screen" href="" />
+	<style type="text/css">
+		body {margin:0;}
+		* {margin, padding: 0;}
+		body {height: 5000px;}
+		header {
+			width: 100%;
+			height: 300px;
+			background-color: orange;
+			overflow: hidden;
+			position: relative;
+		}
+		header > span {color:white; font-size: 20px; }
+		header > .bg { width: 100%; height: 300px; background-color: black;  }
+		header > .bg > .img { position: relative;width: 100%; height: 300px; background-color: lime; /*opacity: 0.5;*/ }
+		.preview {width: 100%; height: 60px; background-color: red; position: absolute;
+			bottom:0;}
+		nav { 
+			width: 90%; 
+			margin:0 auto; 
+			background-color: blue; 
+			height: 100px; }
+		nav.active {position: fixed; top:60px; left:80px;}
+
+	</style>
+	<script type="text/javascript">
+		document.addEventListener("scroll" , scrollwork, false);
+		function scrollwork (e) {
+			var mother = document.querySelector("html");
+			var mother윗면위치 = mother.scrollTop;
+			console.log(mother윗면위치); //240만큼 내려갔을 때 오파시티0, 하이트0
+			// console.log( typeof(mother윗면위치) );
+			var navi = mother.querySelector("nav");
+			var img = mother.querySelector("header > .bg > .img");
+			var header요소 = mother.querySelector("header");
+			var header높이 = header요소.style.height;
+			header요소.style.height = ( 300 - (mother윗면위치 * 2) ) + "px";
+			console.log(mother윗면위치*2 + " = 곱한 값");
+
+			//scrollTop 4씩 증가할때마다, 하이트는 1씩 감소, 오파시티는 0.02씩 감소
+			// if ( mother윗면위치 <= 81) {
+			// 	header요소.style.height = ( 300 - mother윗면위치 ) + "px";
+			// } else {return;};
+
+			console.log(header요소.style.height);
+
+			//scroll 122일때 60이어야함.
+			// header높이 = ( Number(header높이) -= mother윗면위치 ) + "px";
+
+			
+		}
+	</script>
+</head>
+<body>
+	<header>
+    		<div class="bg">
+    			<div class="img">
+    				
+    			</div>
+    		</div>
+    		<div class="preview"></div>
+	</header>
+	
+	<nav></nav>
+    
+
+</body>
+</html>
