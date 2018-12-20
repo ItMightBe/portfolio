@@ -22,28 +22,6 @@ table {
 	border-spacing: 0;
 }
 button{border:0 none;background-color:transparent;cursor:pointer}
-/* fonts */
-@font-face {
-	font-family: 'Kakao Light';
-	src: url(../fonts/KakaoOTF-aLt.eot);
-    src: url(../fonts/KakaoOTF-aLt.woff) format('woff');
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-	font-family: 'Kakao Regular';
-	src: url(../fonts/KakaoOTF-bRg.eot);
-    src: url(../fonts/KakaoOTF-bRg.woff) format('woff');
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-	font-family: 'Kakao Bold';
-	src: url(../fonts/KakaoOTF-cBd.eot);
-    src: url(../fonts/KakaoOTF-cBd.woff) format('woff');
-    font-style: normal;
-    font-weight: normal;
-}
 
 /* common */
 .hidden {
@@ -282,4 +260,27 @@ html, body {height:100%;}
 @media all and (max-width:900px){
     .list_content .link_col{height:249px;}
     .list_content img_inside {width:250px; height:249px;}
+}
+
+/* fonts */
+@font-face {
+	font-family: 'Kakao Light';
+	src: url(../fonts/KakaoOTF-aLt.eot);
+    src: url(../fonts/KakaoOTF-aLt.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+	font-family: 'Kakao Regular';
+	src: url(../fonts/KakaoOTF-bRg.eot);
+    src: url(../fonts/KakaoOTF-bRg.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+	font-family: 'Kakao Bold';
+	src: url(../fonts/KakaoOTF-cBd.eot);
+    src: url(../fonts/KakaoOTF-cBd.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
 }

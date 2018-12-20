@@ -3,18 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<title>미에로화이바</title>
-    <link rel="stylesheet" media="all" href="css/common.css" />
-    <script src="js/jquery-1.12.3.js"></script>
-    <script src="js/common.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="all" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+    <!-- <script src="js/jquery-1.12.3.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <script>
     $(document).ready(function(){
     $('.slider').bxSlider();
     });
-    </script>
+    </script> -->
 </head>
 <body>
     <div class="wrap">
@@ -64,18 +65,18 @@
                         </ul>
                     </nav>
             </header>
-            <ul class="slider">
-                <li class="first">
+            <ul class="list_main_slider">
+                <li class="first item_main_slider">
                     <h3>
                         마시는 식이섬유</br>미에로화이바
                     </h3>
                 </li>
-                <li class="second">
+                <li class="second item_main_slider">
                     <h3>
                         아름다움을</br>디자인하다
                     </h3>
                 </li>
-                <li class="third">
+                <li class="third item_main_slider">
                     <h3>
                         마시는 식이섬유</br>미에로화이바
                     </h3>
@@ -420,9 +421,22 @@
             </div>
             <div class="copyright_box">
                 <img src="images/f_logo.png" alt="미에로화이바">
-                <p class="copyright">© 2018 MIERO FIBER . All Rights Reserved.</p>
-            </div>
+                <small class="copyright">© 2018 MIERO FIBER . All Rights Reserved.</small>
+            </div>  
         </footer>
     </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+    $(document).ready(function(){
+    $('.list_main_slider').slick({
+        autoplay:true,
+        autoplaySpeed: 3000,
+        arrows:false,
+        dots:false,
+    });
+    });
+    </script> 
 </body>
 </html>

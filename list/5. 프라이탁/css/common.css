@@ -1,0 +1,417 @@
+@charset "utf-8";
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0; padding:0;}
+fieldset,img {border:0 none;}
+dl,ul,ol,menu,li {list-style:none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content:''; content:none;}
+input,select,textarea,button {vertical-align:middle;}
+button {border:0 none; background-color:transparent; cursor:pointer;}
+body {background:#fff;}
+body,th,td,input,select,textarea,button {font-size:12px; line-height:1.5; font-family:'돋움',dotum,sans-serif; color:#333;} 
+a {color:#333; text-decoration:none;}
+address,caption,cite,code,dfn,em,var {font-style:normal; font-weight:normal;}
+table {border-collapse: collapse; border-spacing: 0;}
+
+/* fonts */
+@font-face {
+	font-family: 'BebasNeue Bold';
+	src: url(../fonts/BebasNeue_Bold.eot);
+    src: url(../fonts/BebasNeue_Bold.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+	font-family: 'BebasNeue';
+	src: url(../fonts/BebasNeue.eot);
+    src: url(../fonts/BebasNeue.woff) format('woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* layout */
+html, body {height:100%;}
+#wrap {position:relative; width:100%; height:100%;}
+#header {position:relative; width: 100%; height:150px;}
+#gnb {float:right;}
+#content {position:relative; width:100%;/*! background-color: #fcfcfc; */}
+.cont {position:relative; width:100%;}
+
+/* common */
+* {font-family: 'Noto Sans KR', sans-serif; color:#333;} 
+.hidden {
+    visibility:hidden;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    width:1px;
+    height:1px;
+	text-indent:-9999px;
+}
+img {vertical-align:top;}
+.logo_freitag {float:left; width:178px;}
+.ico_freitag {display:inline-block; background-image:url(../images/ico_freitag.png); text-indent:-9999px;}
+.btn_arrow {float:left; text-indent:-9999px;}
+.ico_arrow {
+    text-indent:-9999px;    
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #666;
+}
+.tit_cont {
+    width:100%; 
+    margin:300px 0 100px; 
+    font-size:60px; 
+    font-weight:300; 
+    font-family:'BebasNeue'; 
+    text-align:center;
+}
+.info_area.right {text-align:left;}
+.info_area.left {text-align:right;}
+.info_area .tit_wrap_info {margin-bottom:40px;}
+.info_area .txt_main {font-size:53px;  font-family:'BebasNeue'; line-height:1; }
+.info_area .txt_sub {font-size:30px; font-weight:bold; color:#373737; line-height:1;}
+.info_area .desc_info {font-size:20px; font-weight:normal; color:#373737; line-height:1.5;}
+
+/* slick_dots */
+.slick-dots {position:absolute; bottom:-25px; display:block; padding:0; margin:0; list-style:none; text-align:center;}
+.slick-dots li {position:relative; display:inline-block; width:20px; height:20px; margin:0 1px; padding:0; cursor:pointer;}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus{outline: none;}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {opacity:1;}
+.slick-dots li button:before {   
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left:-5px;
+    margin-top:-5px;
+    content: '';
+    border-radius: 20px;
+    text-align: center;
+    opacity: .75;
+    background-color: #c7afad;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {opacity:.75; background-color: #e35a52;}
+
+
+/* header */
+#header {background-color:#fcfcfc;}
+#header .inner {overflow:hidden; height:60px; padding:56px 0 0;width: 1400px;margin: 0 auto;}
+#gnb .list_gnb {overflow:hidden;}
+#gnb .list_gnb > li {float:left; margin-left:85px;}
+#gnb .list_gnb > .search_gnb {}
+#gnb .list_gnb > .search_gnb a {width:26px; height:26px; margin-top:17px; background-position: -87px 0;}
+#gnb .list_gnb > li:first-child {margin-left:0;}
+#gnb .list_gnb > li a {font-size:18px; line-height:60px;}
+
+/* cont_main */
+.cont_main {overflow:hidden; height:875px; background-color:#fcfcfc;}
+.cont_main .wrap_main {width:1400px; margin:0 auto; background-color:#fcfcfc;} 
+.cont_main .wrap_main:after {content:''; display:block; clear:both; zoom:1;} 
+.cont_main .wrap_main > * {display:inline-block; float:left; height:100%;} 
+.cont_main .info_area {width:40%; text-align:left; padding-top:150px;}
+.cont_main .info_area .sub_tit_main {font-size:18px;}
+.cont_main .info_area .tit_main span {
+    line-height: 1.2;
+    font-size:90px; 
+    font-family: 'Oswald', sans-serif; 
+    letter-spacing: 0.3em;
+}
+.cont_main .info_area .tit_main .txt_red {color:#e35a52;}
+.cont_main .info_area .desc_main {margin-top:30px; font-size:18px;}
+.cont_main .info_area .btn_scroll {
+    display:inline-block; 
+    margin:140px 0 0 0;
+    font-size:0; 
+    transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+.cont_main .info_area .arrow_scroll {width:13px; height:17px; margin-right:12px; background-position:-88px -73px;}
+.cont_main .info_area .txt_scroll {font-size:12px; line-height:1.2; letter-spacing:7px; color:#e35a52; vertical-align:top;}
+.cont_main .img_area {width:60%; padding-top:130px;}
+.cont_main .img_area .img_wrap {overflow:hidden; width:840px; height:587px;}
+.cont_main .img_area .btn_arrow_wrap {overflow:hidden; position:relative; width:840px; margin-top:-20px; text-align:right;}
+.cont_main .img_area .btn_arrow_wrap .btn_prev, 
+.cont_main .img_area .btn_arrow_wrap .btn_next {
+    display:inline-block;
+    float:none;
+    width:38px; 
+    height:38px; 
+    background-image:url(../images/ico_freitag.png);
+}
+.cont_main .img_area .btn_arrow_wrap .btn_prev {background-position:0 0;}
+.cont_main .img_area .btn_arrow_wrap .btn_next {margin-left:2px; background-position:-40px 0;}
+
+/* cont_story */
+.list_story {width:100%;}
+.list_story .item_story {overflow:hidden; position:relative; width:1410px; margin:0 auto;}
+.item_story > * {float:left;;}
+.item_story .info_area {width:480px;}
+.item_story .info_area.right {margin-left: 90px;}
+.item_story .info_area.left {margin-right: 90px;}
+.item_story .info_area .txt_red {font-size:53px; color:#e35a52; font-family:'BebasNeue'; line-height:1; }
+.item_story .info_area .txt_black {font-size:30px; font-weight:bold; color:#373737; line-height:1;}
+.item_story .img_area {position:relative; width:840px; height:100%;}
+.item_story .img_area.left > * {float:right;}
+.item_story .img_area.right > * {float:left;}
+.item_story .img_area img { position:absolute; z-index:10; transition: all 1.5s ease; mix-blend-mode:multiply;}
+.redbar {position:relative; width:270px; height:100%; background-color:#e35a52;}
+.tit_redbar {
+    display:block; 
+    position:absolute;
+    width:600px;    
+    font-size:160px; 
+    font-weight:300; 
+    font-family:'BebasNeue'; 
+    line-height:1;
+    letter-spacing:10px;
+    color:#fff; 
+    transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+
+.item_birth {height:755px;}
+.item_birth .img_area img {bottom:0; right:0px;}
+.item_birth .info_area {padding-top:250px;}
+.item_birth .tit_redbar {top:350px; left:-270px;}
+
+.item_prototype {height:978px;}
+.item_prototype img {right:150px; bottom:140px;}
+.item_prototype .info_area {padding-top:530px;}
+.item_prototype .tit_redbar {
+    top:530px; 
+    left:-60px;
+    transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+
+.item_signiture {height:939px;}
+.item_signiture img {right:50px; bottom:100px;}
+.item_signiture .info_area {padding-top:436px;}
+.item_signiture .tit_redbar {
+    top:430px; 
+    left:-270px;
+    transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+
+/* cont_process */
+.cont_process p, .cont_process dd, .cont_process span {color:#fff;}
+.cont_process .wrap_process {overflow:hidden; width:100%; height:860px;}
+.wrap_process > * {float:left; height:100%;}
+.wrap_process .info_area {
+    position:relative;
+    width:60%;
+    background-position: 50% 50%;
+    background-size:cover;
+}
+.wrap_process .info_area .list_process {width:100%; height:100%;}
+.wrap_process .info_area .list_process .item_process {width:100%; height:100%; background-size:cover;}
+.wrap_process .info_area .list_process .item_process.first_step {background-image:url(../images/img_step_1.jpg);}
+.wrap_process .info_area .list_process .item_process.second_step {background-image:url(../images/img_step_2.jpg);}
+.wrap_process .info_area .list_process .item_process.third_step {background-image:url(../images/img_step_3.jpg);}
+.wrap_process .info_area .list_process .item_process.forth_step {background-image:url(../images/img_step_4.jpg);}
+.wrap_process .info_area .list_process .item_process.last_step {background-image:url(../images/img_step_5.jpg);}
+.wrap_process .slick-dots {bottom:75px; right:120px;}
+.wrap_process .info_area .tit_wrap_info {margin:200px 150px 100px 250px;}
+.wrap_process .info_area .txt_en {font-size:80px; font-family: 'BebasNeue', sans-serif; line-height:1;}
+.wrap_process .info_area .txt_ko {font-size:50px; font-weight:700; line-height:1;}
+.wrap_process .info_area .desc_info {margin-left: 250px; font-size:20px; color:#fff;}
+.btn_more {display:block; width:163px; height:28px; border:1px solid #fff; text-align:center;}
+.btn_more span {line-height:28px; letter-spacing:2px;}
+.wrap_process .info_area .btn_more {margin:40px 0 0 250px;}
+.wrap_process .list_area {width:40%; background-color:#e35a52;}
+.wrap_process .list_area ol {margin-left:148px; margin-top:170px;}
+.wrap_process .list_area li {position:relative; padding-bottom:95px; border-left:1px solid #fff;}
+.wrap_process .list_area li:last-child {padding-bottom:162px;}
+.wrap_process .list_area li > * {float:left;}
+.wrap_process .list_area li:after {content:''; display:block; clear:both; zoom:1;}
+.wrap_process .list_area li p {margin-left:78px; font-size:30px; font-family:'BebasNeue', sans-serif; line-height:1;}
+.wrap_process .list_area li p span {margin-right:28px; font-size:30px; font-family:'BebasNeue', sans-serif;}
+.wrap_process .list_area li .btn_circle {
+    display:block; 
+    position:absolute;
+    top:0;
+    left:0;
+    width: 18px; 
+    height:18px; 
+    margin-left:-9px;
+    background-color:#fff; 
+    border-radius:18px;
+}
+.wrap_process .list_area li .btn_circle.current:after {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:16px;
+    height:16px;
+    margin-left:-10px;
+    margin-top:-10px;
+    border:2px solid #fff;
+    border-radius:16px;
+    background-color:#e35a52;
+    content:'';
+}
+
+/* cont_category */
+.cont_category .list_category {overflow:hidden; width:100%; text-align:center;}
+.list_category .item_category {display:inline-block; margin-left:90px;}
+.list_category .item_category:first-child {margin-left:0px;}
+.list_category .item_category .link_item {display:block;}
+.list_category .item_category .link_item > * {display:block;}
+.list_category .item_category img {height: 240px; margin-bottom:28px;}
+.list_category .item_category .tit_item {font-size:14px; font-weight: 700;}
+.list_category .item_category .link_item:after {
+    content:''; 
+    display:inline-block; 
+    width:17px; 
+    height:17px;
+    margin-top:18px;
+    background:url(../images/ico_freitag.png) no-repeat;
+    background-position: -152px 0;
+}
+
+/* cont_product */
+.list_product {width:100%;}
+.list_product > .item_product {overflow:hidden; width:100%;}
+.wrap_product  {width:100%; height:515px;}
+.wrap_product > * {float:left; height:100%;}
+
+.wrap_product > .info_area { width:42%;}
+.wrap_product > .info_area.right {padding-left:3%;}
+.wrap_product > .info_area.left {padding-right:3%;}
+.wrap_product > .info_area .num_list {display:block; font-size:25px; margin-bottom:120px;}
+.wrap_product > .info_area .btn_more {display:inline-block; width:auto; border:none; margin-top:55px;}
+.wrap_product > .info_area .btn_more span {color:#e35a52;}
+.wrap_product > .info_area .btn_more span:after {content:''; display:block; width:100%; border-bottom:1px solid #e35a52;}
+.wrap_product > .info_area.left .num_list {padding-right:78%;}
+.wrap_product > .info_area.right .num_list {padding-left:78%;}
+
+.wrap_product > .img_area {position:relative; width:55%; background-size:cover; background-repeat:no-repeat;}
+.wrap_product > .img_area.right {background-position-x:0;}
+.wrap_product > .img_area.left {background-position-x:100%;}
+.wrap_product > .img_area .slider_for_product {position:absolute; bottom:-80px;}
+.wrap_product > .img_area.right .slider_for_product {left:0;}
+.wrap_product > .img_area.left .slider_for_product {right:0;}
+
+.list_product .tit_wrap_info {margin-bottom:60px;}
+.list_product .txt_sub { font-weight: 400; font-family:'BebasNeue';}
+.list_product .desc_info {color:#1a1a1a; line-height:1.7;}
+
+.slider_nav_product {position:relative; width:1410px; margin:150px auto 240px;}
+.slider_nav_product .item_slider_nav {
+    position:relative; 
+    width:250px; 
+    height:179px;
+    margin-left:40px; 
+    background-color:#f4f4f4;
+    cursor:pointer;
+}
+.slider_nav_product .item_slider_nav:first-child { margin-left:0;}
+.slider_nav_product .item_slider_nav img {
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%); 
+    -webkit-transform:translate(-50%,-50%); 
+}
+
+.slider_nav_product .slick-arrow {position:absolute; top:50%; z-index:999; margin-top:-35px; text-indent:-9999px;} 
+.slider_nav_product .slick-prev, 
+.slider_nav_product .slick-next {
+    display:block;
+    width:25px;
+    height:70px;
+    background-image: url(../images/ico_freitag.png);
+    background-repeat: no-repeat;
+}
+.slider_nav_product .slick-prev {background-position:-173px 0; left:-50px;}
+.slider_nav_product .slick-next {background-position:-203px 0; right:-150px;}
+.slider_nav_product .slick-dots {width:100%; bottom:-60px;}
+
+.item_joe .img_area {background-image:url(../images/bg_product_joe.jpg);}
+.item_joe .img_area .img_main {width:675px;}
+.item_joe .item_slider_nav img {width:167px;}
+
+.item_skipper .img_area {background-image:url(../images/bg_product_skipper.jpg); }
+.item_skipper .img_area .img_main {width:425px;}
+.item_skipper .item_slider_nav img {width:99px;}
+
+.item_bob .img_area {background-image:url(../images/bg_product_bob.jpg); }
+.item_bob .img_area .img_main {width:441px;}
+.item_bob .item_slider_nav img {width:110px;}
+
+/* Shop Info */
+.cont_shop {}
+.cont_shop .bg_shop {width:100%; height:990px; background:url(../images/bg_shop.jpg) no-repeat; background-size:cover;}
+.cont_shop .info_shop {
+    width:690px; 
+    height:438px; 
+    margin:-270px auto 0; 
+    padding-top:90px; 
+    background-color:#Fff; 
+    text-align:center;
+    box-shadow:0px 40px 70px -41px #888888;
+}
+.cont_shop .info_shop * {font-size:20px; color:#333; line-height:1.5;}
+.cont_shop .info_shop .tit_info {margin-bottom:50px; font-size:60px; font-weight:800; font-family:'bebasNeue'; line-height:1.5;}
+.cont_shop .info_shop .tit_info:after {content:''; display:block; width:40px; margin:0 auto; border-bottom:1px solid #333;}
+.cont_shop .info_shop .address_ko, 
+.cont_shop .info_shop .number {line-height:3;}
+
+/* instagram */
+.list_insta {width:1400px; margin:0 auto; font-size:0; text-align:center;}
+.list_insta:after {content:''; display:block; clear:both; zoom:1;}
+.item_insta {display:inline-block; margin:0 0 25px 25px; transition: all 0.15s ease;}
+.item_insta:first-child {margin:0 0 15px 0;}
+.item_insta:nth-child(5n) {margin:0 0 15px 0;}
+.item_insta:hover {transform:scale(1.05); box-shadow:0px 40px 70px -41px #888888;}
+
+/* footer */
+#footer {width:100%; height:250px; padding-top:65px; margin-top:300px; border-top:1px solid #d3d3d3;}
+#footer > .inner_footer {width:1400px; margin:0 auto;}
+#footer > .inner_footer:after {content:''; display:block; clear:both; zoom:1; }
+.footer_nav {overflow:hidden; margin-bottom:70px;}
+.footer_nav .list_nav {float:right;}
+.footer_nav .list_nav:after {content:''; display:block; clear:both; zoom:1;}
+.footer_nav .item_nav {float:left; font-size:16px; letter-spacing:2px; margin-left:85px;}
+.footer_nav .item_nav:first-child {margin-left:0px;}
+.footer_nav .item_nav > .link_nav {line-height:60px; }
+.footer_social {float:right; font-size:0;}
+.footer_social li {display:inline-block; margin-left:60px;}
+.footer_social li a {display:inline-block; text-indent:-9999px;}
+.footer_social .item_fb {margin-left:0;}
+.footer_social .item_fb a {width:12px; height:24px; background-position:-59px -73px;}
+.footer_social .item_tw a {width:26px; height:21px; background-position:-28px -73px;}
+.footer_social .item_in a {width:23px; height:24px; background-position:0 -73px;}
+.footer_copyright {font-size:15px; color:#afafaf;}

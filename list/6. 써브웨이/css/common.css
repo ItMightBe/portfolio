@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
+fieldset,img {border:0 none}
+dl,ul,ol,menu,li {list-style:none}
+blockquote, q {quotes: none}
+blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
+input,select,textarea,button {vertical-align:middle}
+button {border:0 none;background-color:transparent;cursor:pointer}
+body {background:#fff}
+body,th,td,input,select,textarea,button {line-height:1.5; font-family:'돋움',dotum,sans-serif;color:#333} /* color값은 디자인가이드에 맞게사용 */
+a {color:#333;text-decoration:none}
+a:active, a:hover {text-decoration:underline}
+address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
+* {line-height:1;}
+a:hover {text-decoration:none;}
+
+/* layout */
+html, body {height:100%;}
+#wrap {position:relative; min-width:1280px; height:100%; padding-top:10.625rem;}
+#header {position:absolute; top:0; left:0; width:100%; height:10.313rem;}
+#gnb {width:100%;}
+#container {position:relative; width:100%;}
+.section {width:100%; position:relative;}
+
+/* common */
+body {font-family:'font_ns', sans-serif;}
+.hide {
+    visibility:hidden;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+    width:1px;
+    height:1px;
+    line-height:0;
+    font-size:0px;
+	text-indent:-9999px;
+}
+.inner_wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+}
+#main {}
+#wrap {}
+#container {}
+
+.ir_pm {
+    display:block;
+    overflow:hidden;
+    font-size:0px;
+    line-height:0;
+    text-indent:-9999px
+} /* (DAUM) 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.tit_sec {
+    color:#292929;
+    background: url(../images/bul_tit.png) 0 12px no-repeat;
+    min-height:3.750rem; /*60px;*/
+    padding: 17px 0 0 25px;
+    margin:75px 0 1px 0;
+    font-size:2.500rem; /* 40px; */
+    font-weight:bold;
+    font-family: font_sw;
+    
+}
+
+
+/* header */
+#header {z-index:10; border-top:5px solid #009223;background-color:#fff; text-align:center; transition: all .3s ease;}
+#header.open {height:25.125rem;}
+h1 {display:inline-block;  margin-top:2.188rem;}
+h1 a {display:block; width:202px; height:40px; background:url(../images/logo_w.png) no-repeat; text-indent:-9999px;}
+#gnb {position: relative; margin-top:1.688rem; border-bottom:1px solid #e5e5e5;}
+#gnb:after {content:''; display:block; clear:both; zoom:1;}
+
+#gnb .list_gnb_1dp {display:inline-block; vertical-align:top;}
+#gnb .list_gnb_1dp:after {content:''; display:block; clear:both; zoom:1;}
+#gnb .list_gnb_1dp .item_gnb_1dp {position:relative; float:left;}
+
+#gnb .list_gnb_2dp {
+    overflow:hidden; 
+    position:absolute; 
+    left:0; 
+    width:100%; 
+    height:0rem; 
+    top:4.250rem;
+    opacity:0; 
+    transition:all .3s ease;
+}
+#gnb .list_gnb_2dp.open{height:14.500rem; opacity:1;}
+#gnb .list_gnb_2dp .item_gnb_2dp:first-child {padding-top:1.250rem;}
+#gnb .list_gnb_2dp .item_gnb_2dp:last-child {padding-bottom:1.250rem;}
+
+#gnb .link_gnb_1dp {display:inline-block;  width:11.250rem; padding:1.250rem 0 1.563rem 0; font-size:1.125rem; font-weight:bold; font-family:'font-ns', sans-serif; letter-spacing:-0.04em;}
+#gnb .link_gnb_1dp:hover {text-decoration:none; color:#009223;}
+#gnb .link_gnb_2dp {display:block; padding:0.500rem 0 0.563rem; font-size:0.938rem; font-weight:normal; color:#666;} 
+#gnb .link_gnb_2dp:hover {color:#009223;} 
+
+#header .util_menu {position:absolute; top:2.188rem; right:1.563rem;}
+#header .util_menu li {
+    float:left; 
+    padding:0 0.875rem;
+    margin-left:0.313rem;
+    border:1px solid #ddd;
+    border-radius: 3.125rem; 
+}
+#header .util_menu li:first-child {margin:0;}
+#header .util_menu li a {
+    display:inline-block; 
+    line-height:1.813rem;
+    font-size:0.813rem;
+    color:#666;
+}
+#header .util_menu .global  {padding:0.375em 0.875rem 0.313em 0.875rem;}
+#header .util_menu .global a {
+    width:1rem; 
+    height:1rem; 
+    background:url(../images/icon_global_subway.png) no-repeat;
+}
+
+/* main_visual */
+.sec_main_visual {}
+.sec_main_visual .slider_main {overflow:hidden; position:relative; width:100%; height:27.500rem;}
+.sec_main_visual .slider_main li {overflow:hidden; position:relative; width:100%; height:100%;}
+.sec_main_visual .slider_main li a {display:block; width:100%; height:100%;}
+.sec_main_visual .slider_main img {
+    position:absolute; 
+    left:50%; 
+    transform:translateX(-50%); 
+    -moz-transform:translateX(-50%); 
+    -webkit-transform:translate(-50%);
+}
+.sec_main_visual .quick_link {
+    position:relative;
+    width:73.125rem; /*1170px*/
+    margin:-1.875rem auto 0;
+    text-align:right;
+}
+.sec_main_visual .quick_link ul {
+    overflow:hidden; 
+    display:inline-block;
+    width:37.500em; /* 600px*/ 
+    height:5.000rem; /*80px;*/ 
+    text-align:center; 
+}
+.sec_main_visual .quick_link ul li {float:left; width:50%; height:100%;}
+.sec_main_visual .quick_link ul li a {display:block; width:100%; height:100%; /*line-height:5.000rem;*/font-size: 22px; font-weight:bold;}
+.sec_main_visual .quick_link ul li a > span {display:block; padding-top:1.563rem; /*25px;*/ }
+.sec_main_visual .quick_link ul li a > span:before {content:''; display:inline-block; margin-right:10px; vertical-align:middle;}
+.sec_main_visual .quick_link ul .store {background-color:#ffce32; border-radius:1.875rem 0 0 0; /*30px 0 0 0*/}
+.sec_main_visual .quick_link ul .store a {color:#292929;}
+.sec_main_visual .quick_link ul .store a > span:before {width:24px; height:30px; background-image:url(../images/icon_map.png);}
+.sec_main_visual .quick_link ul .franchise {background-color:#009223; border-radius:0 0 1.875rem 0; /*0 0 30px 0*/}
+.sec_main_visual .quick_link ul .franchise a {color:#fff;}
+.sec_main_visual .quick_link ul .franchise a > span:before {width:34px; height:30px; background-image:url(../images/icon_franchise.png);}
+
+
+
+/* fonts */
+@font-face {
+    font-family:font_ns;
+    font-weight:normal;
+    src:local(※), url(../fonts/NotoSansKR-Regular.woff) format('woff');
+}
+@font-face {
+    font-family:font_ns;
+    font-weight:300;
+    src:local(※), url(../fonts/NotoSansKR-Medium.woff) format('woff');
+}
+@font-face {
+    font-family:font_ns;
+    font-weight:bold;
+    src:local(※), url(../fonts/NotoSansKR-Bold.woff) format('woff');
+}
+@font-face {
+    font-family:font_sw;
+    font-weight:normal;
+    src:local(※), url(../fonts/Subway-SixInch.woff) format('woff');
+}
+@font-face {
+    font-family:font_sw;
+    font-weight:bold;
+    src:local(※), url(../fonts/Subway-Footlong.woff) format('woff');
+}
